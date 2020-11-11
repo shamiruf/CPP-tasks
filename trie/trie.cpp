@@ -199,18 +199,38 @@ trie::const_iterator::const_iterator(const trie_node *node) {
 
 trie::const_iterator trie::begin() const {
 
+    /*trie_node *parent_node = m_root;
+
+    while (true) {
+        if (parent_node != nullptr){
+            //if this node has children set child
+            if (parent_node->children[0] != nullptr) {
+                parent_node = parent_node->children[0];
+            }
+            // the end of string found
+            if (parent_node->is_terminal) {
+                break;
+            }
+
+        }
+        else{
+            break;
+        }
+
+    }
+    return parent_node;*/
+
     trie_node* curr = this->m_root;
 
-    if (curr == nullptr) {
-        return curr;
-    } else {
-        for (auto* child : curr->children) {
-            if (child != nullptr) {
-                curr = child;
-            }
+    while(curr != nullptr) {
+        if (curr->children[0] != nullptr) {
+            curr = curr->children[0];
             if (curr->is_terminal) {
                 break;
             }
+        }
+        if(curr->is_terminal) {
+            break;
         }
     }
     return curr;
@@ -256,7 +276,11 @@ const trie_node* next_node(const trie_node* node) {
             node = child;
             if(node->is_terminal) {
                 return node;
+            } else {
+                return next_node(child);
             }
+        } else {
+            continue;
         }
     }
 

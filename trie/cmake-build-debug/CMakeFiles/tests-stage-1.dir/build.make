@@ -62,10 +62,10 @@ RM = "C:\Program Files\JetBrains\ClLion\CLion 2020.2.4\bin\cmake\win\bin\cmake.e
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rufas\CLionProjects\trie
+CMAKE_SOURCE_DIR = C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rufas\CLionProjects\trie\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/tests-stage-1.dir/depend.make
@@ -78,42 +78,42 @@ include CMakeFiles/tests-stage-1.dir/flags.make
 
 CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.obj: CMakeFiles/tests-stage-1.dir/flags.make
 CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.obj: ../tests-trie-01.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\tests-stage-1.dir\tests-trie-01.cpp.obj -c C:\Users\rufas\CLionProjects\trie\tests-trie-01.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\tests-stage-1.dir\tests-trie-01.cpp.obj -c C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\tests-trie-01.cpp
 
 CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rufas\CLionProjects\trie\tests-trie-01.cpp > CMakeFiles\tests-stage-1.dir\tests-trie-01.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\tests-trie-01.cpp > CMakeFiles\tests-stage-1.dir\tests-trie-01.cpp.i
 
 CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests-stage-1.dir/tests-trie-01.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rufas\CLionProjects\trie\tests-trie-01.cpp -o CMakeFiles\tests-stage-1.dir\tests-trie-01.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\tests-trie-01.cpp -o CMakeFiles\tests-stage-1.dir\tests-trie-01.cpp.s
 
 CMakeFiles/tests-stage-1.dir/trie.cpp.obj: CMakeFiles/tests-stage-1.dir/flags.make
 CMakeFiles/tests-stage-1.dir/trie.cpp.obj: ../trie.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tests-stage-1.dir/trie.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\tests-stage-1.dir\trie.cpp.obj -c C:\Users\rufas\CLionProjects\trie\trie.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/tests-stage-1.dir/trie.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\tests-stage-1.dir\trie.cpp.obj -c C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\trie.cpp
 
 CMakeFiles/tests-stage-1.dir/trie.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests-stage-1.dir/trie.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rufas\CLionProjects\trie\trie.cpp > CMakeFiles\tests-stage-1.dir\trie.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\trie.cpp > CMakeFiles\tests-stage-1.dir\trie.cpp.i
 
 CMakeFiles/tests-stage-1.dir/trie.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests-stage-1.dir/trie.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rufas\CLionProjects\trie\trie.cpp -o CMakeFiles\tests-stage-1.dir\trie.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\trie.cpp -o CMakeFiles\tests-stage-1.dir\trie.cpp.s
 
 CMakeFiles/tests-stage-1.dir/tests-main.cpp.obj: CMakeFiles/tests-stage-1.dir/flags.make
 CMakeFiles/tests-stage-1.dir/tests-main.cpp.obj: ../tests-main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tests-stage-1.dir/tests-main.cpp.obj"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\tests-stage-1.dir\tests-main.cpp.obj -c C:\Users\rufas\CLionProjects\trie\tests-main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/tests-stage-1.dir/tests-main.cpp.obj"
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles\tests-stage-1.dir\tests-main.cpp.obj -c C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\tests-main.cpp
 
 CMakeFiles/tests-stage-1.dir/tests-main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/tests-stage-1.dir/tests-main.cpp.i"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rufas\CLionProjects\trie\tests-main.cpp > CMakeFiles\tests-stage-1.dir\tests-main.cpp.i
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\tests-main.cpp > CMakeFiles\tests-stage-1.dir\tests-main.cpp.i
 
 CMakeFiles/tests-stage-1.dir/tests-main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/tests-stage-1.dir/tests-main.cpp.s"
-	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rufas\CLionProjects\trie\tests-main.cpp -o CMakeFiles\tests-stage-1.dir\tests-main.cpp.s
+	C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\tests-main.cpp -o CMakeFiles\tests-stage-1.dir\tests-main.cpp.s
 
 # Object files for target tests-stage-1
 tests__stage__1_OBJECTS = \
@@ -131,7 +131,7 @@ tests-stage-1.exe: CMakeFiles/tests-stage-1.dir/build.make
 tests-stage-1.exe: CMakeFiles/tests-stage-1.dir/linklibs.rsp
 tests-stage-1.exe: CMakeFiles/tests-stage-1.dir/objects1.rsp
 tests-stage-1.exe: CMakeFiles/tests-stage-1.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable tests-stage-1.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable tests-stage-1.exe"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles\tests-stage-1.dir\link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -144,6 +144,6 @@ CMakeFiles/tests-stage-1.dir/clean:
 .PHONY : CMakeFiles/tests-stage-1.dir/clean
 
 CMakeFiles/tests-stage-1.dir/depend:
-	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rufas\CLionProjects\trie C:\Users\rufas\CLionProjects\trie C:\Users\rufas\CLionProjects\trie\cmake-build-debug C:\Users\rufas\CLionProjects\trie\cmake-build-debug C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles\tests-stage-1.dir\DependInfo.cmake --color=$(COLOR)
+	$(CMAKE_COMMAND) -E cmake_depends "MinGW Makefiles" C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles\tests-stage-1.dir\DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/tests-stage-1.dir/depend
 

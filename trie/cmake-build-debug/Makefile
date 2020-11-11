@@ -67,10 +67,10 @@ RM = "C:\Program Files\JetBrains\ClLion\CLion 2020.2.4\bin\cmake\win\bin\cmake.e
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = C:\Users\rufas\CLionProjects\trie
+CMAKE_SOURCE_DIR = C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = C:\Users\rufas\CLionProjects\trie\cmake-build-debug
+CMAKE_BINARY_DIR = C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -110,9 +110,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles\progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles\progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rufas\CLionProjects\trie\cmake-build-debug\CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\rufas\OneDrive\Documents\github\c++\CPP-tasks\trie\cmake-build-debug\CMakeFiles 0
 .PHONY : all
 
 # The main clean target

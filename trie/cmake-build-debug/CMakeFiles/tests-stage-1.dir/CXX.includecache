@@ -6,9 +6,9 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/rufas/CLionProjects/trie/trie.cpp
+C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.cpp
 trie.hpp
-C:/Users/rufas/CLionProjects/trie/trie.hpp
+C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
 cassert
 -
 queue
@@ -16,7 +16,7 @@ queue
 iostream
 -
 
-C:/Users/rufas/CLionProjects/trie/trie.hpp
+C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
 vector
 -
 string
