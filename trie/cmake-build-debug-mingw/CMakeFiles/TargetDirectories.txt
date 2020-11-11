@@ -1,0 +1,8 @@
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/tests-stage-1.dir
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/tests-stage-2.dir
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/tests-stage-3.dir
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/tests-stage-4.dir
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/tests-stage-5.dir
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/rebuild_cache.dir
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/test.dir
+C:/Users/rufas/OneDrive/trie/cmake-build-debug-mingw/CMakeFiles/edit_cache.dir
