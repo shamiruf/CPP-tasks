@@ -4,10 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/test-helpers.cpp" "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/test-helpers.cpp.obj"
-  "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/tests-main.cpp" "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/tests-main.cpp.obj"
-  "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/tests-trie-04.cpp" "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/tests-trie-04.cpp.obj"
-  "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.cpp" "C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/trie.cpp.obj"
+  "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/test-helpers.cpp" "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/test-helpers.cpp.o"
+  "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/tests-main.cpp" "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/tests-main.cpp.o"
+  "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/tests-trie-04.cpp" "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/tests-trie-04.cpp.o"
+  "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.cpp" "/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug/CMakeFiles/tests-stage-4.dir/trie.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

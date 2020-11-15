@@ -1,19 +1,17 @@
 #include "trie.hpp"
 
-#include <cassert>
-
 #include <queue>
 #include <iostream>
-#include <stack>
+#include <list>
 
 
 trie::trie() {
-    m_root = new trie_node;
+    m_root = new trie_node();
     m_size = 0;
 }
 
 trie::trie(const std::vector<std::string>& strings) {
-    m_root = new trie_node;
+    m_root = new trie_node();
     m_size = 0;
     for (const auto & string : strings) {
         insert(string);
@@ -21,8 +19,9 @@ trie::trie(const std::vector<std::string>& strings) {
 }
 
 trie &trie::operator=(const trie &rhs) {
-    if (this->m_root == rhs.m_root)
+    if (this->m_root == rhs.m_root) {
         return *this;
+    }
     return *this;
 }
 
@@ -36,72 +35,44 @@ trie::trie(trie &&rhs) {
 }
 
 trie &trie::operator=(trie &&rhs) {
-    std::vector<trie_node *> nodes;
-    std::stack<trie_node *> stack;
-    // add the first elem
-    stack.push(m_root);
-
-    while (!stack.empty()) {
-        // get the first elem of array and delete it
-        trie_node* curr = stack.top(); stack.pop();
-
-//        if (!curr) continue;
-        for (trie_node* child : curr->children) {
-            if (child){
-                // add next node to array
-                stack.push(child);
-            }
-        }
-
-        nodes.push_back(curr);
-    }
-    for (auto node : nodes) {
-        //free the memory
-        delete node;
-    }
-
-    m_root = rhs.m_root;
-    rhs.m_root = nullptr;
-
-    m_size = rhs.m_size;
-    rhs.m_size = 0;
     return *this;
 }
 
 trie::~trie() {
+    std::list <trie_node*> trie_list;
+    std::list <trie_node*> to_del;
+    trie_list.push_back(m_root);
     if (this->m_root != nullptr) {
-        std::queue <trie_node* > trie;
-        trie.push(m_root);
-
-        while (!trie.empty()) {
-            //check the children of root
-            trie_node* parent_node = trie.front(); trie.pop();
-            for (auto &child : parent_node->children) {
+        while (!trie_list.empty()) {
+            trie_node* curr = trie_list.front();
+            trie_list.pop_front();
+            if(curr == nullptr) continue;
+            for (auto &child : curr->children) {
                 if(child != nullptr){
-                    //add children to queue to work with them later
-                    trie.push(child);
-                }
-                else{
-                    break;
+                    trie_list.push_back(child);
                 }
             }
-            //delete parent because we get all his children
-            delete parent_node;
+            to_del.push_back(curr);
         }
-    }
-    else {
+        for (auto d : to_del) {
+            delete d;
+        }
+    } else {
         this->m_root = nullptr;
         this->m_size = 0;
     }
+
 }
 
 size_t new_length(const std::string& str) {
     size_t len = str.length();
-    if (str.empty()) {
+    if (len < 1) {
         len = len + 1;
     }
     return len;
 }
+
+
 
 bool trie::insert(const std::string& str) {
 
@@ -127,7 +98,13 @@ bool trie::insert(const std::string& str) {
                 }
             }
             else if (child == nullptr) {
-                auto* new_node = new trie_node;
+                trie_node *new_node;
+                new_node = new trie_node;
+                if (len == 1) {
+                    new_node->is_terminal = true;
+                } else {
+                    new_node->is_terminal = false;
+                }
                 new_node->payload = c;
                 new_node->parent = curr;
                 child = new_node;
@@ -140,7 +117,7 @@ bool trie::insert(const std::string& str) {
     m_size++;
     curr->is_terminal = true;
 
-    return contains(str);
+    return true;
 }
 
 
@@ -149,29 +126,38 @@ bool trie::contains(const std::string& str) const {
     if (this->m_root == nullptr) {
         return false;
     }
+
+    if (m_size == 0) {
+        return false;
+    }
+
     size_t len = new_length(str);
 
     trie_node* curr = this->m_root;
 
-    for (size_t i = 0; i < len; i++) {
-        char  c = str[i];
-        for (auto* child : curr->children) {
-            if (child == nullptr) {
-                return false;
-            }
-            else {
-                if (child->payload == c) {
-                    curr = child;
-                    break;
+    if(!(trie::empty())) {
+        for (size_t i = 0; i < len; i++) {
+            char  c = str[i];
+            for (auto* child : curr->children) {
+                if (child == nullptr) {
+                    return false;
+                } else if (child != nullptr){
+                    if (child->payload == c) {
+                        curr = child;
+                        break;
+                    } else {
+                        continue;
+                    }
                 }
             }
         }
     }
+
     return curr->is_terminal;
 }
 
 bool trie::empty() const {
-    return m_size == 0;
+    return (m_size == 0);
 }
 
 bool trie::erase(const std::string& str) {
@@ -189,33 +175,53 @@ bool trie::erase(const std::string& str) {
     for (size_t i = 0; i < len; i++) {
         char  c = str[i];
         for (auto& child : curr->children) {
-            if (child != nullptr) {
+            if (child) {
                 if (child->payload == c) {
                     curr = child;
                     break;
                 }
-
             }
         }
     }
 
     if (curr->is_terminal) {
-        int i = 0;
-        if ((bool) curr->children[i]) {
-            curr->is_terminal = false;
-        }
-        else {
-            delete(curr);
+
+        for (auto* child : curr->children) {
+            if (child) {
+                curr->is_terminal = false;
+                m_size--;
+                return true;
+            }
         }
 
+        trie_node* del = curr;
+        for (int i = 0; i < 128; i++) {
+            if (curr->parent->children[i] == curr) {
+                curr = curr->parent;
+                curr->children[i] = nullptr;
+                break;
+            }
+        }
+        delete del;
+
+        /*int i = 0;
+        if (curr->children[i] != nullptr) {
+            curr->is_terminal = false;
+        }
+        if (curr->children[i] == nullptr){
+            delete curr;
+        }*/
+
         m_size--;
-        if (m_size == 0) {
+        /*if (m_size == 0) {
             trie_node* fff = this->m_root;
             for (auto& child : fff->children) {
                 child = nullptr;
             }
-        }
+        }*/
         return true;
+    } else {
+        curr->is_terminal = false;
     }
     return false;
 }
@@ -326,7 +332,7 @@ trie::const_iterator trie::const_iterator::operator++(int z) {
 trie::const_iterator::reference trie::const_iterator::operator*() const {
     // change code for another bad same
     auto curr = this->current_node;
-    std::string str = "";
+    std::string str;
     bool n = true;
     if(curr->payload) {
         while (n) {

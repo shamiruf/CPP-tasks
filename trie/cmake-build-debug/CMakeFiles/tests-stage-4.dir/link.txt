@@ -1,3 +1,1 @@
-"C:\Program Files\JetBrains\ClLion\CLion 2020.2.4\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\tests-stage-4.dir/objects.a
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\tests-stage-4.dir/objects.a @CMakeFiles\tests-stage-4.dir\objects1.rsp
-C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -g   -Wl,--whole-archive CMakeFiles\tests-stage-4.dir/objects.a -Wl,--no-whole-archive  -o tests-stage-4.exe -Wl,--out-implib,libtests-stage-4.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\tests-stage-4.dir\linklibs.rsp
+/usr/bin/c++  -g   CMakeFiles/tests-stage-4.dir/tests-trie-04.cpp.o CMakeFiles/tests-stage-4.dir/trie.cpp.o CMakeFiles/tests-stage-4.dir/tests-main.cpp.o CMakeFiles/tests-stage-4.dir/test-helpers.cpp.o  -o tests-stage-4 

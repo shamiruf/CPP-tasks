@@ -1,11 +1,9 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/tests-stage-4.dir/test-helpers.cpp.obj"
-  "CMakeFiles/tests-stage-4.dir/tests-main.cpp.obj"
-  "CMakeFiles/tests-stage-4.dir/tests-trie-04.cpp.obj"
-  "CMakeFiles/tests-stage-4.dir/trie.cpp.obj"
-  "libtests-stage-4.dll.a"
-  "tests-stage-4.exe"
-  "tests-stage-4.exe.manifest"
+  "CMakeFiles/tests-stage-4.dir/test-helpers.cpp.o"
+  "CMakeFiles/tests-stage-4.dir/tests-main.cpp.o"
+  "CMakeFiles/tests-stage-4.dir/tests-trie-04.cpp.o"
+  "CMakeFiles/tests-stage-4.dir/trie.cpp.o"
+  "tests-stage-4"
   "tests-stage-4.pdb"
 )
 

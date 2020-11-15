@@ -6,19 +6,17 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.cpp
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.cpp
 trie.hpp
-C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
-cassert
--
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
 queue
 -
 iostream
 -
-stack
+list
 -
 
-C:/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
 vector
 -
 string
