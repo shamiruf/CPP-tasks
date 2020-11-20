@@ -1,3 +1,4 @@
+#include <iostream>
 #include "trie.hpp"
 #include "test-helpers.hpp"
 #include "catch.hpp"
@@ -113,6 +114,7 @@ TEST_CASE("Trie intersection", "[intersection]") {
     SECTION("No empty tries") {
         t1 = trie({ "queue", "quiz", "quizzical", "quilt" });
         SECTION("Identical tries") {
+            std::cout << "t1 size " << t1.size() << "\n";
             auto res = t1 & t1;
             CHECK(res.size() == 4);
             REQUIRE(res == t1);
