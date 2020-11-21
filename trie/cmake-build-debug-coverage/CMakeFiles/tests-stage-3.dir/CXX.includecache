@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.cpp
+trie.hpp
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
+queue
+-
+iostream
+-
+list
+-
+
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/trie.hpp
+vector
+-
+string
+-
+iterator
+-
+iosfwd
+-
+

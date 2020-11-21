@@ -1,0 +1,1 @@
+/usr/bin/c++  --coverage -g   CMakeFiles/tests-stage-5.dir/tests-trie-05.cpp.o CMakeFiles/tests-stage-5.dir/trie.cpp.o CMakeFiles/tests-stage-5.dir/tests-main.cpp.o CMakeFiles/tests-stage-5.dir/test-helpers.cpp.o  -o tests-stage-5 

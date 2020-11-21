@@ -1,0 +1,8 @@
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/rebuild_cache.dir
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/edit_cache.dir
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/test.dir
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/tests-stage-4.dir
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/tests-stage-5.dir
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/tests-stage-3.dir
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/tests-stage-2.dir
+/mnt/c/Users/rufas/OneDrive/Documents/github/c++/CPP-tasks/trie/cmake-build-debug-coverage/CMakeFiles/tests-stage-1.dir

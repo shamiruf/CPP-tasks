@@ -1,0 +1,66 @@
+image: mjerabek/pjc_sandbox
+before_script:
+    # sanitizer runtime options (passed as environment variables)
+    - export UBSAN_OPTIONS=print_stacktrace=1:silence_unsigned_overflow=1:color=always
+    - export ASAN_OPTIONS=strip_path_prefix=$PWD:replace_str=1:replace_intrin=1:detect_invalid_pointer_pairs=2:detect_container_overflow=1:strict_string_checks=1:detect_stack_use_after_return=1:check_initialization_order=1:strict_init_order=1:check_printf=1:color=always
+    - export MSAN_OPTIONS=strip_path_prefix=$PWD:color=always
+    - ln -s llvm-symbolizer-3.8 /usr/bin/llvm-symbolizer
+    - CMAKE_COMMON_FLAGS=(-DCMAKE_BUILD_TYPE=Debug -DCMAKE_CXX_COMPILER=clang++-3.8 -GNinja -DCMAKE_CXX_FLAGS_DEBUG="-g -fdiagnostics-color" -DCMAKE_CXX_FLAGS_RELWITHDEBINFO="-fdiagnostics-color -g -O2 -DNDEBUG")
+
+stages:
+    - build
+    - test
+
+build:
+    stage: build
+    script:
+        # Release build
+        - cmake "${CMAKE_COMMON_FLAGS[@]}" -DCMAKE_BUILD_TYPE="RelWithDebInfo" -Bbuild/release -H. && cmake --build build/release
+
+        # Build with AddressSanitizer and UndefinedBehaviorSanitizer
+        - cmake "${CMAKE_COMMON_FLAGS[@]}" -DCMAKE_CXX_FLAGS="-fsanitize=address -fsanitize=undefined" -Bbuild/ausan -H. && cmake --build build/ausan
+
+        # Build with MemorySanitizer.
+        - cmake "${CMAKE_COMMON_FLAGS[@]}" -DCMAKE_CXX_FLAGS="${msan_cxx_flags}"
+                -DCMAKE_EXE_LINKER_FLAGS="${msan_exe_linker_flags}"
+                -Bbuild/msan -H. && cmake --build build/msan
+    artifacts:
+        paths:
+            - build/*/tests-direct
+            - build/*/tests-runner-direct
+            - build/*/tests-runner-subprocess
+            - build/*/symcalc
+    # Cache the build products, so that we do not have to rebuild everything
+    # from scratch. If you think something goes weird during the build, try
+    # clearing runner cache (button on GitLab pipelines page).
+    cache:
+        paths:
+            - build
+
+tests_direct:
+    stage: test
+    script:
+        - build/ausan/tests-direct
+        - build/msan/tests-direct
+        # - valgrind --leak-check=full build/debug/tests-direct
+
+tests_runner_direct:
+    stage: test
+    script:
+        - build/ausan/tests-runner-direct
+        - build/msan/tests-runner-direct
+        # - valgrind --leak-check=full build/debug/tests-runner-direct
+        - build/release/tests-runner-direct '[.long]'
+
+tests_runner_subprocess:
+    stage: test
+    script:
+        - TEST_CMD=build/ausan/symcalc build/release/tests-runner-subprocess
+        - TEST_CMD=build/msan/symcalc build/release/tests-runner-subprocess
+        - TEST_CMD=build/release/symcalc build/release/tests-runner-subprocess '[.long]'
+
+# some common variables
+variables:
+    msan_cxx_flags: -fsanitize=memory -fsanitize-memory-track-origins -fno-omit-frame-pointer
+                    -I/sysroot/msan/include -I/sysroot/msan/include/c++/v1 -stdlib=libc++
+    msan_exe_linker_flags: -stdlib=libc++ -lc++abi -L/sysroot/msan/lib -Wl,-rpath,/sysroot/msan/lib
